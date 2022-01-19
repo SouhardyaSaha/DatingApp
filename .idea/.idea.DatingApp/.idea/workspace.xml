@@ -8,10 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="DB setup with EntityFramework">
-      <change afterPath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" afterDir="false" />
+    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="UsersController">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,7 +93,7 @@
       <workItem from="1642507073532" duration="952000" />
       <workItem from="1642508060633" duration="3609000" />
       <workItem from="1642517940893" duration="5351000" />
-      <workItem from="1642575919420" duration="2256000" />
+      <workItem from="1642575919420" duration="3698000" />
     </task>
     <task id="LOCAL-00001" summary="DB setup with EntityFramework">
       <created>1642576298713</created>
@@ -100,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642576298713</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="UsersController">
+      <created>1642578301353</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642578301353</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +132,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="DB setup with EntityFramework" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB setup with EntityFramework" />
+    <MESSAGE value="UsersController" />
+    <option name="LAST_COMMIT_MESSAGE" value="UsersController" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
