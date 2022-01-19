@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7xUO2ruKIcyFv6aNP7NM9F8tLtmT51rdc+RwwK1IyhfWh8D/cwAt2cp6tjX71haMFVABmEyJBH+8kz3XMknbcw==",
+  "dgSpecHash": "6CXPdBirZrE4fmglxBz5SeTfkk+BP4IXdJ8xpdAaYB1EMdHN4HdZHnlQmdArj27PZeESmA78MvOcu2CSromLpw==",
   "success": true,
   "projectFilePath": "/home/souhardya/Projects/DatingApp/backend/backend.csproj",
   "expectedPackageFiles": [
     "/home/souhardya/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/home/souhardya/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.1/microsoft.aspnetcore.authentication.jwtbearer.6.0.1.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -32,8 +33,8 @@
     "/home/souhardya/.nuget/packages/microsoft.identity.client/4.21.1/microsoft.identity.client.4.21.1.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.15.0/microsoft.identitymodel.jsonwebtokens.6.15.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.identitymodel.logging/6.15.0/microsoft.identitymodel.logging.6.15.0.nupkg.sha512",
-    "/home/souhardya/.nuget/packages/microsoft.identitymodel.protocols/6.8.0/microsoft.identitymodel.protocols.6.8.0.nupkg.sha512",
-    "/home/souhardya/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.8.0/microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
+    "/home/souhardya/.nuget/packages/microsoft.identitymodel.protocols/6.10.0/microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "/home/souhardya/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.10.0/microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.identitymodel.tokens/6.15.0/microsoft.identitymodel.tokens.6.15.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",

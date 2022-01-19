@@ -8,13 +8,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="Password Field for User">
+    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="JWT TokenService">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources/dd6fc1d1-142a-4c23-9991-2129261b34d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources/dd6fc1d1-142a-4c23-9991-2129261b34d4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/datingapp.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datingapp.db-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/datingapp.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datingapp.db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +37,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61bff6fc6d774f548e6cb8b588a1460a14600/73/29711042/Claim.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Entities/AppUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Data/Migrations/DataContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/64/4691f159/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Data/Migrations/DataContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/b3/a57279e8/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -106,7 +107,8 @@
       <workItem from="1642507073532" duration="952000" />
       <workItem from="1642508060633" duration="3609000" />
       <workItem from="1642517940893" duration="5351000" />
-      <workItem from="1642575919420" duration="14269000" />
+      <workItem from="1642575919420" duration="15975000" />
+      <workItem from="1642610602204" duration="1903000" />
     </task>
     <task id="LOCAL-00001" summary="DB setup with EntityFramework">
       <created>1642576298713</created>
@@ -129,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642583950500</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UserDto">
+      <created>1642606604722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642606604722</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JWT TokenService">
+      <created>1642606645264</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642606645264</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +170,9 @@
     <MESSAGE value="DB setup with EntityFramework" />
     <MESSAGE value="UsersController" />
     <MESSAGE value="Password Field for User" />
-    <option name="LAST_COMMIT_MESSAGE" value="Password Field for User" />
+    <MESSAGE value="UserDto" />
+    <MESSAGE value="JWT TokenService" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT TokenService" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
