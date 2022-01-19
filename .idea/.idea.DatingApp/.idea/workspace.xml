@@ -8,12 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="UsersController">
+    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="Password Field for User">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources/dd6fc1d1-142a-4c23-9991-2129261b34d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources/dd6fc1d1-142a-4c23-9991-2129261b34d4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Data/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Data/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Entities/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Entities/AppUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/datingapp.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datingapp.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +36,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Entities/AppUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Data/Migrations/DataContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/64/4691f159/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Data/Migrations/DataContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/b3/a57279e8/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,7 +64,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Inspections-ASP.NET" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.backend">
@@ -96,7 +110,7 @@
       <workItem from="1642507073532" duration="952000" />
       <workItem from="1642508060633" duration="3609000" />
       <workItem from="1642517940893" duration="5351000" />
-      <workItem from="1642575919420" duration="4937000" />
+      <workItem from="1642575919420" duration="11885000" />
     </task>
     <task id="LOCAL-00001" summary="DB setup with EntityFramework">
       <created>1642576298713</created>
@@ -112,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642578301353</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Password Field for User">
+      <created>1642583950500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642583950500</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +157,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="DB setup with EntityFramework" />
     <MESSAGE value="UsersController" />
-    <option name="LAST_COMMIT_MESSAGE" value="UsersController" />
+    <MESSAGE value="Password Field for User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Password Field for User" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
