@@ -8,6 +8,7 @@ import {MatDividerModule} from "@angular/material/divider";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatMenuModule} from "@angular/material/menu";
 import {RouterModule} from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {RouterModule} from "@angular/router";
   imports: [
     RouterModule,
     CommonModule,
+    HttpClientModule,
     MatToolbarModule,
     FlexLayoutModule,
     MatMenuModule,
