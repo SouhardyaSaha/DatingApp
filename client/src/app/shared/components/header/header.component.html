@@ -1,0 +1,21 @@
+<mat-toolbar fxLayout="row">
+  <div class="container">
+    <span class="mt-1" fxFlex>Dating App</span>
+    <button [routerLink]="item.routeLink" *ngFor="let item of menuItems" fxHide.lt-md mat-button>
+      <mat-icon class="me-1">{{ item.icon }}</mat-icon>
+      {{ item.label }}
+    </button>
+    <button [matMenuTriggerFor]="dropMenu" fxHide fxShow.lt-md mat-icon-button>
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #dropMenu="matMenu">
+      <ng-container *ngFor="let item of menuItems">
+        <button [routerLink]="item.routeLink" mat-menu-item>
+          <mat-icon class="mr">{{item.icon}}</mat-icon>
+          {{ item.label }}
+        </button>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-menu>
+  </div>
+</mat-toolbar>
