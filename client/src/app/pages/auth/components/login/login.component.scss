@@ -1,0 +1,18 @@
+.login-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.card-container {
+  margin: 0 1rem;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.sign-up {
+  text-decoration: none;
+}
