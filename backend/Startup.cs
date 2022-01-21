@@ -38,7 +38,13 @@ namespace backend
             services.AddApplicationServices(_config);
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebAPIv5", Version = "v1"}); });
-            services.AddCors();
+            services.AddCors(o => o.AddPolicy("CorsPolicy", policy => {
+                policy
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials()
+                    .WithOrigins("http://localhost:4200");
+            }));
             services.AddIdentityServices(_config);
         }
 
@@ -52,14 +58,14 @@ namespace backend
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
-            
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

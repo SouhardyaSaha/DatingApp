@@ -10,13 +10,10 @@
   <component name="ChangeListManager">
     <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/BaseApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/BaseApiController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +102,10 @@
       <workItem from="1642575919420" duration="15975000" />
       <workItem from="1642610602204" duration="2166000" />
       <workItem from="1642660918396" duration="668000" />
+      <workItem from="1642677863777" duration="290000" />
+      <workItem from="1642679106080" duration="1867000" />
+      <workItem from="1642681078861" duration="479000" />
+      <workItem from="1642747532012" duration="2325000" />
     </task>
     <task id="LOCAL-00001" summary="DB setup with EntityFramework">
       <created>1642576298713</created>
