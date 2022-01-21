@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
   selector: 'app-register',
@@ -10,13 +10,13 @@ import { Router } from "@angular/router";
 export class RegisterComponent implements OnInit {
 
   authenticationForm: FormGroup = this.fb.group({
-    email: ["", [Validators.required, Validators.email]],
+    username: ["", [Validators.required]],
     password: ["", [Validators.required, Validators.minLength(6),]],
   });
 
   isLoading: boolean = false;
 
-  constructor(private router: Router, private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -25,7 +25,16 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.isLoading = true
-    console.log(this.authenticationForm)
+    this.authService.register(this.authenticationForm.value).subscribe(
+      res => {
+        console.log(res)
+        this.isLoading = false
+      },
+      error => {
+        console.log(error)
+        this.isLoading = false
+      }
+    )
   }
 
 }
