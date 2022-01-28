@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
 
 @Component({
@@ -28,9 +28,11 @@ export class LoginComponent implements OnInit {
     this.isLoading = true
     this.authService.login(this.authenticationForm.value).subscribe(
       res => {
+        console.log(res)
         this.isLoading = false
       },
       error => {
+        console.log(error)
         this.isLoading = false
       }
     )
