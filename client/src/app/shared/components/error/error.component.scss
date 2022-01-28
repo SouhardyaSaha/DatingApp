@@ -1,0 +1,16 @@
+.error-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.error-text {
+  margin-top: 4rem;
+}
