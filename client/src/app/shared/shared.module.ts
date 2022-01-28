@@ -8,12 +8,21 @@ import {MatDividerModule} from "@angular/material/divider";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatMenuModule} from "@angular/material/menu";
 import {RouterModule} from "@angular/router";
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { ErrorComponent } from './components/error/error.component';
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatCardModule } from "@angular/material/card";
+import { AlertDialog, ConfirmationDialog } from "./services/notification.service";
+import { ErrorsInterceptor } from "./interceptors/errors.interceptor";
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    ConfirmationDialog,
+    AlertDialog,
+    ErrorComponent
   ],
   imports: [
     RouterModule,
@@ -25,8 +34,15 @@ import { HttpClientModule } from "@angular/common/http";
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatCardModule,
   ],
-  exports: [HeaderComponent]
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorsInterceptor, multi: true},
+    // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+  ],
+  exports: [HeaderComponent, ConfirmationDialog, AlertDialog]
 })
 export class SharedModule {
 }
