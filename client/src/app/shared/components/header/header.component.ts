@@ -20,13 +20,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     {
       label: 'Lists',
       icon: 'list_alt',
-      routeLink: '/auth',
+      routeLink: '/member/list',
       requiredAuth: true
     },
     {
       label: 'Messages',
       icon: 'chat_bubble_outline',
-      routeLink: '/auth',
+      routeLink: '/messages',
       requiredAuth: true
     },
     {

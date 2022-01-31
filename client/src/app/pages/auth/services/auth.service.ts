@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { AuthResponseModel } from "../models/auth-response.model";
 import { BehaviorSubject, Observable, tap } from "rxjs";
 import { environment } from "../../../../environments/environment";
 import { AuthReqModel } from "../models/auth-req.model";
@@ -54,6 +53,6 @@ export class AuthService {
   private authenticateUser(user: UserModel) {
     localStorage.setItem("user", JSON.stringify(user))
     this.user.next(user)
-    this.router.navigate(['/lists'])
+    this.router.navigate(['/members'])
   }
 }

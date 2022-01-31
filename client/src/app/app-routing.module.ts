@@ -7,8 +7,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: "lists",
-    loadChildren: () => import('./pages/lists/lists.module').then(m => m.ListsModule)
+    path: "member",
+    loadChildren: () => import('./pages/members/member.module').then(m => m.MemberModule)
+  },
+  {
+    path: "messages",
+    loadChildren: () => import('./pages/messages/messages.module').then(m => m.MessagesModule)
   }
 ];
 
@@ -16,4 +20,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
