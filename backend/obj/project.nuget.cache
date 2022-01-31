@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "6CXPdBirZrE4fmglxBz5SeTfkk+BP4IXdJ8xpdAaYB1EMdHN4HdZHnlQmdArj27PZeESmA78MvOcu2CSromLpw==",
+  "dgSpecHash": "yiS6Me7JEAFuJk6FDIH2W9i3I9cHuqUaB9LHQXaHTCqG4bLVbYYy+88+YcVDCPEA57JQe7JXjZjVcytKJ0Humw==",
   "success": true,
   "projectFilePath": "/home/souhardya/Projects/DatingApp/backend/backend.csproj",
   "expectedPackageFiles": [
+    "/home/souhardya/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
+    "/home/souhardya/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.1/microsoft.aspnetcore.authentication.jwtbearer.6.0.1.nupkg.sha512",
-    "/home/souhardya/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/home/souhardya/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "/home/souhardya/.nuget/packages/microsoft.data.sqlite.core/6.0.1/microsoft.data.sqlite.core.6.0.1.nupkg.sha512",

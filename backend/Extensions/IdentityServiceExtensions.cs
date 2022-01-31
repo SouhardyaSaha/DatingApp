@@ -8,7 +8,6 @@ public static class IdentityServiceExtensions
 {
     public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
     {
-        
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
@@ -20,7 +19,7 @@ public static class IdentityServiceExtensions
                     ValidateAudience = false
                 };
             });
-        
+
         return services;
     }
 }
