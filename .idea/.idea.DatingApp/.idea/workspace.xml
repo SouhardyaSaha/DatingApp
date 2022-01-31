@@ -9,8 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources/dd6fc1d1-142a-4c23-9991-2129261b34d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources/dd6fc1d1-142a-4c23-9991-2129261b34d4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Data/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Data/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Entities/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Entities/AppUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/datingapp.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datingapp.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +33,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61bff6fc6d774f548e6cb8b588a1460a14600/73/29711042/Claim.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/64/4691f159/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/DTOs/LoginDto.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/souhardya/Projects/DatingApp/backend/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/b3/a57279e8/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -105,6 +107,7 @@
       <workItem from="1642679106080" duration="1867000" />
       <workItem from="1642681078861" duration="479000" />
       <workItem from="1642747532012" duration="2325000" />
+      <workItem from="1643516817310" duration="4153000" />
     </task>
     <task id="LOCAL-00001" summary="DB setup with EntityFramework">
       <created>1642576298713</created>
