@@ -19,6 +19,8 @@ import { TabsModule } from "ngx-bootstrap/tabs";
 import { NgxGalleryModule } from "@kolkov/ngx-gallery";
 import { JwtInterceptor } from "./interceptors/jwt.interceptor";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { LoadingInterceptor } from "./interceptors/loading.interceptor";
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -43,11 +45,13 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     MatCardModule,
     TabsModule.forRoot(),
     NgxGalleryModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxSpinnerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorsInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
     // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
   ],
   exports: [
@@ -56,7 +60,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     AlertDialog,
     TabsModule,
     NgxGalleryModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxSpinnerModule
   ]
 })
 export class SharedModule {

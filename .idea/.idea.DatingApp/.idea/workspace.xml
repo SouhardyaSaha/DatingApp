@@ -8,23 +8,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="Automapper, DTOs">
-      <change afterPath="$PROJECT_DIR$/client/src/app/pages/members/member.module.ts" afterDir="false" />
+    <list default="true" id="23bc0d4a-6ce8-4776-98a9-882e513fc1a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DatingApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Data/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Data/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Helpers/AutoMapperProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/datingapp.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datingapp.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/pages/auth/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/pages/auth/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/auth/components/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/pages/auth/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/auth/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/pages/lists/components/lists/lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/components/member-list/member-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/pages/lists/components/lists/lists.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/components/member-list/member-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/pages/lists/components/lists/lists.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/components/member-list/member-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/pages/lists/lists-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/members-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/pages/lists/lists.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/pages/members/components/member-detail/member-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/components/member-detail/member-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/pages/members/member.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/member.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/pages/members/members-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/members-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/pages/members/services/members.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/pages/members/services/members.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/shared/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/shared/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/shared/interceptors/jwt.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/interceptors/jwt.interceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61bff6fc6d774f548e6cb8b588a1460a14600/73/29711042/Claim.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/64/4691f159/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/20/85ae4100/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61157e1cbb74356afa55701932adf221cc400/b3/a57279e8/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -64,7 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.backend">
@@ -119,7 +125,8 @@
       <workItem from="1642747532012" duration="2325000" />
       <workItem from="1643516817310" duration="4153000" />
       <workItem from="1643621517843" duration="4154000" />
-      <workItem from="1643640874786" duration="616000" />
+      <workItem from="1643640874786" duration="905000" />
+      <workItem from="1643690819551" duration="2081000" />
     </task>
     <task id="LOCAL-00001" summary="DB setup with EntityFramework">
       <created>1642576298713</created>

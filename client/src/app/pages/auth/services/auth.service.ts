@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
 export class AuthService {
 
   private baseURL: string = environment.baseURL
-  public user: BehaviorSubject<UserModel | null> = new BehaviorSubject<UserModel | null>(null)
+  public user$: BehaviorSubject<UserModel | null> = new BehaviorSubject<UserModel | null>(null)
 
   constructor(private http: HttpClient, private router:Router) {
   }
@@ -40,19 +40,19 @@ export class AuthService {
     let data: string | null = localStorage.getItem('user')
     if (data) {
       user = JSON.parse(data)
-      this.user.next(user)
+      this.user$.next(user)
     }
   }
 
   public logout() {
     localStorage.removeItem('user')
-    this.user.next(null)
+    this.user$.next(null)
   }
 
 
   private authenticateUser(user: UserModel) {
     localStorage.setItem("user", JSON.stringify(user))
-    this.user.next(user)
-    this.router.navigate(['/members'])
+    this.user$.next(user)
+    this.router.navigate(['/member'])
   }
 }

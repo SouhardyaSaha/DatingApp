@@ -7,19 +7,23 @@ import { MemberDetailComponent } from './components/member-detail/member-detail.
 import { MemberCardComponent } from './components/member-card/member-card.component';
 import { SharedModule } from "../../shared/shared.module";
 import { MatIconModule } from "@angular/material/icon";
+import { MemberEditComponent } from './components/member-edit/member-edit.component';
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
   declarations: [
     MemberListComponent,
     MemberDetailComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
-  imports: [
-    CommonModule,
-    MembersRoutingModule,
-    SharedModule,
-    MatIconModule
-  ]
+    imports: [
+        CommonModule,
+        MembersRoutingModule,
+        SharedModule,
+        MatIconModule,
+        FormsModule
+    ]
 })
 export class MemberModule { }

@@ -15,7 +15,7 @@ export class JwtInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    return this.authService.user.pipe(
+    return this.authService.user$.pipe(
       take(1),
       exhaustMap(
         (user) => {

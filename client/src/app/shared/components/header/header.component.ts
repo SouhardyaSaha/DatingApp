@@ -30,6 +30,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
       requiredAuth: true
     },
     {
+      label: 'Profile',
+      icon: 'account_circle',
+      routeLink: '/member/edit',
+      requiredAuth: true
+    },
+    {
       label: 'Logout',
       icon: 'logout',
       routeLink: '/auth',
@@ -50,7 +56,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.userSubscription = this.authService.user.subscribe(user => {
+    this.userSubscription = this.authService.user$.subscribe(user => {
       this.user = user
     })
   }
