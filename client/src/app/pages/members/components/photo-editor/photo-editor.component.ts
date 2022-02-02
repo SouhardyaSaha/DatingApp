@@ -3,6 +3,7 @@ import { NgxFileDropEntry } from "ngx-file-drop";
 import { MemberModel } from "../../../../shared/models/member.model";
 import { NotificationService } from "../../../../shared/services/notification.service";
 import { MembersService } from "../../services/members.service";
+import { Photo } from "../../../../shared/models/photo";
 
 @Component({
   selector: 'app-photo-editor',
@@ -52,8 +53,19 @@ export class PhotoEditorComponent implements OnInit {
     return true;
   }
 
-  onRemoveUploadItem() {
+  onRemoveSelectedItem() {
     this.files = []
+  }
+
+  onDeletePhoto(photo: Photo) {
+    if (confirm("Are you sure you want to delete this photo?")) {
+      this.memberService.deletePhoto(photo.id).subscribe(
+        () => {
+          this.notificationService.success("Photo Deletion Successful!")
+          if (this.member) this.member.photos = this.member.photos.filter(p => p.id != photo.id)
+        }
+      )
+    }
   }
 
   onUploadItem() {
@@ -61,7 +73,7 @@ export class PhotoEditorComponent implements OnInit {
       this.memberService.uploadPhoto(this.image, this.member.username).subscribe(
         res => {
           if (this.member) {
-            this.onRemoveUploadItem()
+            this.onRemoveSelectedItem()
             this.member.photos.push(res)
           }
         }

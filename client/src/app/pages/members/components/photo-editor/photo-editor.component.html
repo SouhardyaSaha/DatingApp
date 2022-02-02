@@ -1,7 +1,7 @@
 <div class="row">
   <div *ngFor="let photo of member?.photos" class="col-6 col-md-4">
     <img alt="{{ photo.url }}" class="img-thumbnail p-1" src="{{ photo.url }}">
-    <button class="w-100 mb-2" color="warn" mat-stroked-button>
+    <button (click)="onDeletePhoto(photo)" [disabled]="photo.isMain" class="w-100 mb-2" color="warn" mat-stroked-button>
       <mat-icon>delete</mat-icon>
     </button>
   </div>
@@ -24,7 +24,7 @@
     <div class="col-md-2">
       <div class="upload-content">
         <img alt="upload-image" class="img-thumbnail p-1" src="{{ uploadingPhotoUrl }}">
-        <button (click)="onRemoveUploadItem()" class="cancel-button" mat-icon-button>
+        <button (click)="onRemoveSelectedItem()" class="cancel-button" mat-icon-button>
           <mat-icon>cancel</mat-icon>
         </button>
       </div>

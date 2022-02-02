@@ -5,9 +5,11 @@ import { MemberEditComponent } from "../../pages/members/components/member-edit/
 @Injectable({
   providedIn: 'root'
 })
-export class PreventUnsavedChangesGuard implements CanDeactivate<unknown> {
+export class PreventUnsavedChangesGuard implements CanDeactivate<MemberEditComponent> {
   canDeactivate(component: MemberEditComponent): boolean {
-    return true;
+    if (component.editForm.dirty) {
+      return confirm("Any Unsaved Progress will be lost. Are you sure?")
+    }
+    return true
   }
-
 }
