@@ -3,6 +3,7 @@ import { environment } from "../../../../environments/environment";
 import { HttpClient } from "@angular/common/http";
 import { MemberModel } from "../../../shared/models/member.model";
 import { Observable, of, tap } from "rxjs";
+import { Photo } from "../../../shared/models/photo";
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +36,21 @@ export class MembersService {
       tap(() => {
         const index = this.members.indexOf(member)
         this.members[index] = member;
+      })
+    );
+  }
+
+  public uploadPhoto(file: File, username: string) {
+    const formData = new FormData()
+    formData.append("file", file)
+    return this.http.post<Photo>(this.baseUrl + '/users/add-photo', formData).pipe(
+      tap((res) => {
+        this.members.forEach(member => {
+          if (member.username === username) {
+            member.photos.concat(res)
+            return;
+          }
+        })
       })
     );
   }

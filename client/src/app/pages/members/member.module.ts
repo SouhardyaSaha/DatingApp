@@ -8,7 +8,12 @@ import { MemberCardComponent } from './components/member-card/member-card.compon
 import { SharedModule } from "../../shared/shared.module";
 import { MatIconModule } from "@angular/material/icon";
 import { MemberEditComponent } from './components/member-edit/member-edit.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { PhotoEditorComponent } from './components/photo-editor/photo-editor.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatButtonModule } from "@angular/material/button";
+import { NgxFileDropModule } from "ngx-file-drop";
 
 
 @NgModule({
@@ -16,14 +21,20 @@ import { FormsModule } from "@angular/forms";
     MemberListComponent,
     MemberDetailComponent,
     MemberCardComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    PhotoEditorComponent
   ],
     imports: [
         CommonModule,
         MembersRoutingModule,
         SharedModule,
         MatIconModule,
-        FormsModule
+        FormsModule,
+        MatFormFieldModule,
+        MatChipsModule,
+        MatButtonModule,
+        NgxFileDropModule,
+        ReactiveFormsModule
     ]
 })
 export class MemberModule { }

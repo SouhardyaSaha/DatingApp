@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using AutoMapper;
 using backend.Data;
 using backend.DTOs;
 using backend.Entities;
@@ -13,26 +14,26 @@ public class AuthController : BaseApiController
 {
     private readonly DataContext _context;
     private readonly ITokenService _tokenService;
+    private readonly IMapper _mapper;
 
-    public AuthController(DataContext context, ITokenService tokenService)
+    public AuthController(DataContext context, ITokenService tokenService, IMapper mapper)
     {
         _context = context;
         _tokenService = tokenService;
+        _mapper = mapper;
     }
 
     [HttpPost("register")]
     public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
     {
         if (await UserExists(registerDto.UserName)) return BadRequest("Username already in use!");
+        var user = _mapper.Map<AppUser>(registerDto);
 
         using var hmac = new HMACSHA512();
-
-        var user = new AppUser
-        {
-            UserName = registerDto.UserName.ToLower(),
-            Password = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
-            PasswordSalt = hmac.Key
-        };
+        
+        user.UserName = registerDto.UserName.ToLower();
+        user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password));
+        user.PasswordSalt = hmac.Key;
 
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
@@ -40,7 +41,8 @@ public class AuthController : BaseApiController
         return new UserDto
         {
             UserName = user.UserName,
-            token = _tokenService.CreateToken(user)
+            Token = _tokenService.CreateToken(user),
+            KnownAs = user.KnownAs
         };
     }
 
@@ -54,14 +56,14 @@ public class AuthController : BaseApiController
         using var hmac = new HMACSHA512(user.PasswordSalt);
         var hashedPassword = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
 
-        var isMatchedPassword = user.Password.SequenceEqual(hashedPassword);
+        var isMatchedPassword = user.PasswordHash.SequenceEqual(hashedPassword);
 
         if (!isMatchedPassword) return Unauthorized("Invalid Credentials");
 
         return new UserDto
         {
             UserName = user.UserName,
-            token = _tokenService.CreateToken(user)
+            Token = _tokenService.CreateToken(user)
         };
     }
 

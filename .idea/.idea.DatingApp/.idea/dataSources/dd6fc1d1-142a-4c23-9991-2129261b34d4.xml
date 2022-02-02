@@ -1391,7 +1391,7 @@
       <DataType>TEXT|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="506" parent="492" name="Password">
+    <column id="506" parent="492" name="PasswordHash">
       <DataType>BLOB|0s</DataType>
       <DefaultExpression>X&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>

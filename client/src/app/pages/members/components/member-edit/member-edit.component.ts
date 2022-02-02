@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from "@angular/forms";
+import { FormBuilder, FormGroup, NgForm } from "@angular/forms";
 import { MemberModel } from "../../../../shared/models/member.model";
 import { UserModel } from "../../../../shared/models/user.model";
 import { MembersService } from "../../services/members.service";
@@ -14,9 +14,10 @@ import { take } from "rxjs";
 })
 export class MemberEditComponent implements OnInit {
 
-  @ViewChild('editForm') editForm: NgForm | undefined;
   member: MemberModel | null = null;
   user: UserModel | null = null;
+
+  editForm: FormGroup = this.fb.group({})
 
   @HostListener('window:beforeunload', ['$event']) unloadNotification($event: any) {
     if (this.editForm && this.editForm.dirty) {
@@ -24,12 +25,16 @@ export class MemberEditComponent implements OnInit {
     }
   }
 
-  constructor(private authService: AuthService, private memberService: MembersService,
-              private notificationService: NotificationService) {
-    this.authService.user$.pipe(take(1)).subscribe(user => this.user = user);
+  constructor(
+    private authService: AuthService,
+    private memberService: MembersService,
+    private notificationService: NotificationService,
+    private fb: FormBuilder
+  ) {
   }
 
   ngOnInit(): void {
+    this.authService.user$.pipe(take(1)).subscribe(user => this.user = user);
     this.loadMember();
   }
 
@@ -37,11 +42,26 @@ export class MemberEditComponent implements OnInit {
     if (!this.user) return;
     this.memberService.getMember(this.user.userName).subscribe(member => {
       this.member = member;
+      this.initForm()
+    })
+  }
+
+  private initForm() {
+    this.editForm = this.fb.group({
+      introduction: [this.member?.introduction],
+      lookingFor: [this.member?.lookingFor],
+      interests: [this.member?.interests],
+      city: [this.member?.city],
+      country: [this.member?.country],
     })
   }
 
   updateMember() {
-    if(!this.member) return;
+    this.member = {
+      ...this.member,
+      ...this.editForm.value
+    }
+    if (!this.member) return;
     this.memberService.updateMember(this.member).subscribe(() => {
       this.notificationService.success('Profile updated successfully');
       if (this.editForm) this.editForm.reset(this.member);
