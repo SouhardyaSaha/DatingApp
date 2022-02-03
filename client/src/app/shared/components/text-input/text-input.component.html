@@ -1,0 +1,13 @@
+<mat-form-field class="w-100 mb-2">
+  <mat-label>{{ label }}</mat-label>
+  <input #inputElement
+         [formControl]="$any(ngControl.control)"
+         [placeholder]="placeholder"
+         [type]="type"
+         matInput>
+  <mat-error *ngIf="ngControl.control?.hasError('required')"> {{label}} is required</mat-error>
+  <mat-error *ngIf="ngControl.control?.hasError('misMatch')"> Passwords do not match</mat-error>
+  <mat-error *ngIf="ngControl.control?.hasError('minlength')">
+    {{label}} must be at least {{ ngControl.control?.getError('minlength')['requiredLength'] }} characters
+  </mat-error>
+</mat-form-field>

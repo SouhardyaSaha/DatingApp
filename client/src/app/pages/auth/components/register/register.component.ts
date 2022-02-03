@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, ValidatorFn, Validators } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
 import { CrossFieldErrorMatcher } from "../../utils/errorStateMatcher";
 import { NotificationService } from "../../../../shared/services/notification.service";
@@ -26,29 +26,31 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     console.log(this.authenticationForm)
-    this.authService.register(this.authenticationForm.value).subscribe(
-      () => {
-        this.notificationService.success("Registration Successful")
-      }
-    )
+    // this.authService.register(this.authenticationForm.value).subscribe(
+    //   () => {
+    //     this.notificationService.success("Registration Successful")
+    //   }
+    // )
+  }
+
+  private checkMatch = (matchTo: string): ValidatorFn => {
+    return control => {
+      let pass = control.parent?.get(matchTo)?.value
+      let confirmPass = control.value
+      return (pass && confirmPass) && pass === confirmPass ? null : {misMatch: true}
+    }
   }
 
   private initForm() {
     this.authenticationForm = this.fb.group({
       username: ["", [Validators.required]],
       password: ["", [Validators.required, Validators.minLength(6)]],
-      confirmPassword: [""]
-    }, {validators: this.checkPasswords});
+      confirmPassword: ["", this.checkMatch('password')]
+    })
 
-    // this.authenticationForm.controls['password'].valueChanges.subscribe(() => {
-    //     this.authenticationForm.controls["confirmPassword"].updateValueAndValidity()
-    //   }
-    // )
-  }
-
-  private checkPasswords: ValidatorFn = (group: AbstractControl): ValidationErrors | null => {
-    let pass = group.get('password')?.value;
-    let confirmPass = group.get('confirmPassword')?.value
-    return pass === confirmPass ? null : {misMatch: true}
+    this.authenticationForm.controls['password'].valueChanges.subscribe(() => {
+        this.authenticationForm.controls["confirmPassword"].updateValueAndValidity()
+      }
+    )
   }
 }

@@ -78,6 +78,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     MatProgressSpinnerModule,
     MatCardModule,
     MatButtonModule,
+    TextInputComponent,
   ]
 })
 export class SharedModule {
