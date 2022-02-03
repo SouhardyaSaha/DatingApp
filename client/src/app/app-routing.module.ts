@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UnAuthGuard } from "./shared/guards/un-auth.guard";
 
 const routes: Routes = [
   {
+    path: "",
+    pathMatch: "full",
+    redirectTo: "auth"
+  },
+  {
     path: "auth",
+    canActivate: [UnAuthGuard],
     loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
   {

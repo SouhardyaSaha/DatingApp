@@ -1,0 +1,7 @@
+<mat-form-field class="w-100">
+  <mat-label>{{ label }}</mat-label>
+  <input [max]="maxDate" [formControl]="$any(ngControl.control)" [matDatepicker]="$any(picker)"  matInput>
+  <mat-error *ngIf="ngControl.control?.hasError('required')"> {{label}} is required</mat-error>
+  <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>

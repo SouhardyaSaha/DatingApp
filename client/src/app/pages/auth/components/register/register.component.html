@@ -11,24 +11,45 @@
                         [label]="'Username'"
                         [placeholder]="'Ex. pat@example.com'"></app-text-input>
 
+        <app-text-input [formControl]="$any(authenticationForm.get('knownAs'))"
+                        [label]="'Known As'"
+                        [placeholder]="'knownAs'"></app-text-input>
+
+        <app-text-input [formControl]="$any(authenticationForm.get('gender'))"
+                        [label]="'Gender'"
+                        [placeholder]="'Gender'"></app-text-input>
+
+        <app-text-input [formControl]="$any(authenticationForm.get('city'))"
+                        [label]="'City'"
+                        [placeholder]="'City'"></app-text-input>
+
+        <app-text-input [formControl]="$any(authenticationForm.get('country'))"
+                        [label]="'Country'"
+                        [placeholder]="'Country'"></app-text-input>
+
+
+        <app-date-input
+          [formControl]="$any(authenticationForm.get('dateOfBirth'))"
+          [maxDate]="maxDate" label="Date Of Birth" placeholder="Date Of Birth"></app-date-input>
+
         <app-text-input [formControl]="$any(authenticationForm.get('password'))"
                         [label]="'Password'"
-                        [placeholder]="'Password'"></app-text-input>
+                        [placeholder]="'Password'"
+                        [type]="'password'"></app-text-input>
 
         <app-text-input [formControl]="$any(authenticationForm.get('confirmPassword'))"
                         [label]="'Confirm Password'"
                         [matcher]="crossFieldErrorMatcher"
-                        [placeholder]="'Confirm Password'"></app-text-input>
+                        [placeholder]="'Confirm Password'"
+                        [type]="'password'"></app-text-input>
         <!--          <a [routerLink]="['/auth/forgotpassword']">Forgot Your Password?</a>-->
       </mat-card-content>
       <mat-card-actions>
-        <button
-          color="primary" mat-raised-button type="submit">
+        <button [disabled]="authenticationForm.invalid" color="primary"
+                mat-raised-button type="submit">
           Register
         </button>
       </mat-card-actions>
     </form>
   </mat-card>
 </div>
-
-{{ this.authenticationForm.value | json }}
